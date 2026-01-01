@@ -13,7 +13,7 @@
 <body>
     <header id="header" class="header--overlay">
         <div class="logo">
-            <img src="/website-fluyr/assets/images/logo-fluyr.png" alt="Fluyr - Piscinas & Ambientes">
+            <img src="/website-fluyr/assets/images/logo-fluyr.png" data-logo-light="/website-fluyr/assets/images/logo-fluyr.png" data-logo-dark="/website-fluyr/assets/images/logo-fluyr-dark.png" alt="Fluyr - Piscinas & Ambientes">
         </div>
         <nav>
             <a href="../index.html">Início</a>
@@ -34,15 +34,24 @@
     <script>
         const header = document.getElementById('header');
         const heroAbout = document.querySelector('.hero-about');
+        const logoImg = document.querySelector('.logo img');
 
         const updateHeaderState = () => {
             if (!header || !heroAbout) return;
             const heroBottom = heroAbout.getBoundingClientRect().bottom;
             const headerHeight = header.offsetHeight;
-            if (heroBottom <= headerHeight) {
+            const useOverlay = heroBottom > headerHeight;
+
+            if (!useOverlay) {
                 header.classList.remove('header--overlay');
             } else {
                 header.classList.add('header--overlay');
+            }
+
+            if (logoImg) {
+                const lightLogo = logoImg.dataset.logoLight || logoImg.getAttribute('data-logo-light') || logoImg.src;
+                const darkLogo = logoImg.dataset.logoDark || logoImg.getAttribute('data-logo-dark') || logoImg.src;
+                logoImg.src = useOverlay ? lightLogo : darkLogo;
             }
         };
 
