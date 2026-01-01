@@ -81,7 +81,7 @@ header.header--overlay {
 .logo img {
   width: auto;
   display: block;
-  height: 60px; /* About default */
+  height: 300px; /* About default */
 }
 
 /* Optional: larger logo image for Home. Add class "logo--hero" on the same element. */
