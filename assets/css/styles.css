@@ -45,7 +45,7 @@ h1, h2, h3, h4 {
    Add class "header--overlay" to match Home hero overlay.
 ------------------------------*/
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
   padding: 1.5rem 5%;
@@ -56,6 +56,13 @@ header {
 
   background: var(--header-bg);
   box-shadow: var(--header-shadow);
+}
+
+header.header--sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 header.header--overlay {

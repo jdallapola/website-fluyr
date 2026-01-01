@@ -14,7 +14,7 @@
 <body>
     <header class="header--overlay">
         <div class="logo">
-            <img src="/website-fluyr/assets/images/logo-fluyr.png" data-logo-light="/website-fluyr/assets/images/logo-fluyr.png" data-logo-dark="/website-fluyr/assets/images/logo-fluyr-dark.png" alt="Fluyr - Piscinas & Ambientes">
+            <img src="./assets/images/logo-fluyr.png" data-logo-light="/assets/images/logo-fluyr.png" data-logo-dark="/assets/images/logo-fluyr-dark.png" alt="Fluyr - Piscinas & Ambientes">
         </div>
         <nav>
             <a href="#produtos">Produtos</a>
@@ -64,18 +64,15 @@
             if (!header || !hero) return;
             const heroBottom = hero.getBoundingClientRect().bottom;
             const headerHeight = header.offsetHeight;
-            const useOverlay = heroBottom > headerHeight;
+            const pastHero = heroBottom <= headerHeight;
 
-            if (!useOverlay) {
-                header.classList.remove('header--overlay');
-            } else {
-                header.classList.add('header--overlay');
-            }
+            header.classList.toggle('header--overlay', !pastHero);
+            header.classList.toggle('header--sticky', pastHero);
 
             if (logoImg) {
                 const lightLogo = logoImg.dataset.logoLight || logoImg.getAttribute('data-logo-light') || logoImg.src;
                 const darkLogo = logoImg.dataset.logoDark || logoImg.getAttribute('data-logo-dark') || logoImg.src;
-                logoImg.src = useOverlay ? lightLogo : darkLogo;
+                logoImg.src = pastHero ? darkLogo : lightLogo;
             }
         };
 
@@ -119,7 +116,7 @@
             </div>
             <div class="product-card">
                 <div class="product-image">
-                    <img src="data:image/svg+xml,%3Csvg width='400' height='300' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='300' fill='%239ca3af'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='18' fill='white' text-anchor='middle' dy='.3em'%3EArga Micro Cement%3C/text%3E%3C/svg%3E" alt="Arga Micro Cement">
+                    <img src="./assets/images/produtos/arga-cement_1.jpg" alt="Arga Micro Cement">
                 </div>
                 <div class="product-content">
                     <h3>Arga Micro Cement</h3>

@@ -40,18 +40,15 @@
             if (!header || !heroAbout) return;
             const heroBottom = heroAbout.getBoundingClientRect().bottom;
             const headerHeight = header.offsetHeight;
-            const useOverlay = heroBottom > headerHeight;
+            const pastHero = heroBottom <= headerHeight;
 
-            if (!useOverlay) {
-                header.classList.remove('header--overlay');
-            } else {
-                header.classList.add('header--overlay');
-            }
+            header.classList.toggle('header--overlay', !pastHero);
+            header.classList.toggle('header--sticky', pastHero);
 
             if (logoImg) {
                 const lightLogo = logoImg.dataset.logoLight || logoImg.getAttribute('data-logo-light') || logoImg.src;
                 const darkLogo = logoImg.dataset.logoDark || logoImg.getAttribute('data-logo-dark') || logoImg.src;
-                logoImg.src = useOverlay ? lightLogo : darkLogo;
+                logoImg.src = pastHero ? darkLogo : lightLogo;
             }
         };
 
