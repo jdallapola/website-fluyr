@@ -11,7 +11,7 @@
 
 </head>
 <body>
-    <header id="header">
+    <header id="header" class="header--overlay">
         <div class="logo">
             <img src="/website-fluyr/assets/images/logo-fluyr.png" alt="Fluyr - Piscinas & Ambientes">
         </div>
@@ -32,15 +32,23 @@
     </section>
 
     <script>
-        // Header scroll effect
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
+        const header = document.getElementById('header');
+        const heroAbout = document.querySelector('.hero-about');
+
+        const updateHeaderState = () => {
+            if (!header || !heroAbout) return;
+            const heroBottom = heroAbout.getBoundingClientRect().bottom;
+            const headerHeight = header.offsetHeight;
+            if (heroBottom <= headerHeight) {
+                header.classList.remove('header--overlay');
             } else {
-                header.classList.remove('scrolled');
+                header.classList.add('header--overlay');
             }
-        });
+        };
+
+        updateHeaderState();
+        window.addEventListener('scroll', updateHeaderState);
+        window.addEventListener('resize', updateHeaderState);
     </script>
 
     <section class="story">
