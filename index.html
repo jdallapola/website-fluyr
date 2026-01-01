@@ -12,7 +12,7 @@
     
 </head>
 <body>
-    <header>
+    <header class="header--overlay">
         <div class="logo">
             <img src="/website-fluyr/assets/images/logo-fluyr.png" alt="Fluyr - Piscinas & Ambientes">
         </div>
@@ -53,7 +53,27 @@
                 </div>
             </div>
         </div>
-    </section>
+</section>
+
+    <script>
+        const header = document.querySelector('header');
+        const hero = document.querySelector('.hero');
+
+        const updateHeaderState = () => {
+            if (!header || !hero) return;
+            const heroBottom = hero.getBoundingClientRect().bottom;
+            const headerHeight = header.offsetHeight;
+            if (heroBottom <= headerHeight) {
+                header.classList.remove('header--overlay');
+            } else {
+                header.classList.add('header--overlay');
+            }
+        };
+
+        updateHeaderState();
+        window.addEventListener('scroll', updateHeaderState);
+        window.addEventListener('resize', updateHeaderState);
+    </script>
 
     <section class="stats">
         <div class="stats-container">
