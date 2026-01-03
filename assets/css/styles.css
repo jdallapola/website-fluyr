@@ -609,7 +609,7 @@ nav a:hover {
    About Page - Story (from Second)
 ------------------------------*/
 .story {
-  padding: 7rem 5% 4rem;
+  padding: 5rem 5% 0;
   background: white;
 }
 
@@ -624,7 +624,7 @@ nav a:hover {
 
 .story--hero {
   background: #f9fafb;
-  padding-bottom: 2.5rem;
+  padding-bottom: 0;
 }
 
 .story--hero .story-content {
@@ -643,6 +643,10 @@ nav a:hover {
   color: var(--color-gray-medium);
   margin-bottom: 1.5rem;
   line-height: 1.8;
+}
+
+.story-text p:last-of-type {
+  margin-bottom: 0;
 }
 
 .story--hero .story-text h2 {
@@ -725,7 +729,8 @@ nav a:hover {
 }
 
 .rigor {
-  padding: 2.5rem 5% 4rem;
+  padding: 0 5% 2rem;
+  margin-top: -4.25rem;
   background: #f9fafb;
 }
 
@@ -1536,11 +1541,11 @@ footer {
   }
 
   .story {
-    padding: 5.5rem 5% 3.5rem;
+    padding: 3rem 5% 0;
   }
 
   .story--hero {
-    padding-bottom: 2.25rem;
+    padding-bottom: 0;
   }
 
   .rigor-content {
@@ -1645,11 +1650,12 @@ footer {
   }
 
   .story {
-    padding: 4.5rem 6% 3rem;
+    padding: 2.75rem 6% 0;
   }
 
   .rigor {
-    padding: 2.25rem 6% 3.5rem;
+    padding: 0 6% 1.5rem;
+    margin-top: -3rem;
   }
 
   .rigor-content {
