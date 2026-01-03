@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
@@ -31,6 +31,10 @@
             <h1>Mais do que piscinas.<br>Uma nova forma de viver.</h1>
             <p>Nascemos da experiência de mais de duas décadas no universo dos acabamentos, com o propósito de transformar espaços aquáticos em verdadeiros refúgios de bem-estar.</p>
         </div>
+        <div class="scroll-down-wrap">
+            <span class="scroll-down-label">conheça nossa história</span>
+            <a class="scroll-down" href="#sobre-fluyr" aria-label="Descer para Sobre a Fluyr">↓</a>
+        </div>
     </section>
 
     <script>
@@ -57,42 +61,41 @@
         updateHeaderState();
         window.addEventListener('scroll', updateHeaderState);
         window.addEventListener('resize', updateHeaderState);
+
+        const scrollDown = document.querySelector('.scroll-down');
+        const heroTarget = document.getElementById('sobre-fluyr');
+        if (scrollDown && heroTarget) {
+            scrollDown.addEventListener('click', (e) => {
+                e.preventDefault();
+                heroTarget.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }
     </script>
 
-    <section class="story">
+        <section class="story story--hero" id="sobre-fluyr">
         <div class="story-content">
             <div class="story-text">
-                <h2>Nossa História</h2>
-                <p>A Fluyr foi fundada em 2024, mas nossa jornada começou muito antes. Carregamos mais de 20 anos de expertise em acabamentos e revestimentos, sempre com um olhar atento às inovações que chegam de mercados mais maduros como Estados Unidos e Europa.</p>
-                <p>Identificamos uma lacuna significativa no mercado brasileiro: enquanto revestimentos monolíticos já são consolidados internacionalmente, no Brasil permaneciam praticamente inexplorados. Foi nesse cenário que decidimos trazer soluções revolucionárias para transformar a forma como piscinas e ambientes são concebidos.</p>
-                <p>Hoje, através de produtos como ArgaSand Pool, Arga Micro Cement, Spray Deck e Spray Mineralli, oferecemos alternativas que unem durabilidade excepcional, estética impecável e funcionalidade superior.</p>
+                <span class="story-badge">Sobre a Fluyr</span>
+                <h2>Elevamos piscinas e ambientes com <i>precisão, beleza e longevidade.</i></h2>
+                <p class="story-lead">A Fluyr foi fundada em 2024, mas nossa jornada começou muito antes. Carregamos mais de 20 anos de expertise em acabamentos e revestimentos, construída na prática, acompanhando de perto a evolução técnica do setor e observando, com senso crítico, as referências que emergem em mercados mais maduros. </p>
+                <p class="story-lead"> Identificamos uma lacuna relevante no mercado brasileiro: enquanto os revestimentos monolíticos já se consolidaram internacionalmente como sistemas de alto desempenho, ainda faltava, no Brasil, uma solução desenvolvida com método, pensada desde a origem para o nosso clima, nossa água e nossa forma de construir. </p>
+                <p class="story-lead"> Por isso, a Fluyr atua com tecnologia brasileira, desenvolvida em parceria com a indústria, projetada, testada e continuamente aprimorada para a realidade do país. Soluções concebidas por quem conhece o território, entende suas variáveis e assume, de forma consistente, a responsabilidade técnica pelo desempenho ao longo do tempo.</p>
+                <p class="story-lead"> Hoje, por meio de produtos como ArgaSand Pool, Arga Micro Cement, Spray Deck e Spray Mineralli, a Fluyr entrega sistemas monolíticos que combinam durabilidade excepcional, estética contínua e funcionalidade superior, redefinindo a forma como piscinas e ambientes são concebidos no Brasil. </p> <ul class="story-list">
+                   
+                </ul>
             </div>
-            <div class="story-image">
-                <img src="..\assets\images\about-hero.png" alt="Piscina Fluyr">
+            <div class="story-image story-image-card">
+                <img src="../assets/images/pool image.png" alt="Piscina Fluyr">
+            </div>
             </div>
         </div>
     </section>
 
-    <section class="mission">
-        <div class="mission-content">
-            <h2>Nossa Missão</h2>
-            <div class="mission-grid">
-                <div class="mission-item">
-                    <div class="mission-icon">◆</div>
-                    <h3>Inovação Contínua</h3>
-                    <p>Trazer para o Brasil as melhores tecnologias e tendências globais em revestimentos, adaptadas às necessidades e ao clima tropical.</p>
-                </div>
-                <div class="mission-item">
-                    <div class="mission-icon">◆</div>
-                    <h3>Excelência em Execução</h3>
-                    <p>Garantir aplicações impecáveis através de equipes altamente treinadas e processos rigorosamente controlados.</p>
-                </div>
-                <div class="mission-item">
-                    <div class="mission-icon">◆</div>
-                    <h3>Experiência Completa</h3>
-                    <p>Proporcionar tranquilidade em cada etapa, desde o planejamento até a entrega final, eliminando preocupações dos nossos clientes.</p>
-                </div>
-            </div>
+        <section class="mission mission--statement">
+        <div class="mission-content mission-statement-card">
+            <div class="mission-statement-eyebrow">Nossa Missão</div>
+            <h2>Almejamos elevar o padrão de concepção de piscinas e ambientes arquitetônicos no Brasil, integrando tecnologia, estética e durabilidade em soluções monolíticas que simplificam a construção e ampliam o valor do espaço ao longo do tempo.</h2>
+            <div class="mission-statement-line"></div>
         </div>
     </section>
 
@@ -204,3 +207,6 @@
     </footer>
 </body>
 </html>
+
+
+
