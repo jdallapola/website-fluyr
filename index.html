@@ -8,8 +8,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/styles.css">
-    
-    
 </head>
 <body>
     <header class="header--overlay">
@@ -19,8 +17,10 @@
         <nav>
             <a href="#produtos">Produtos</a>
             <a href="./about/about.html">Sobre</a>
-            <a href="#projetos">Projetos</a>
-            <a href="#contato" class="cta-button">Contato</a>
+            <a href="./projetos/projetos.html">Projetos</a>
+            <a href="https://wa.me/5543991634570" class="whatsapp-link">
+                <img src="./assets/images/whatsapp-logo.png" alt="WhatsApp">
+            </a>
         </nav>
     </header>
 
@@ -28,9 +28,9 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1>Design para viver.</h1>
-                <p>Criamos ambientes onde o tempo desacelera e o essencial permanece, dando forma a espaços que convidam à pausa, ao encontro e ao bem-estar.</p>
+                <p>Criamos ambientes onde o tempo desacelera e o essencial permanece.</p>
                 <div class="hero-buttons">
-                    <button class="btn-primary">Descubra o seu oásis.</button>
+                    <button class="btn-primary">Descubra o seu oasis.</button>
                 </div>
             </div>
         </div>
@@ -40,7 +40,7 @@
             </div>
             <div class="hero-stats-mini">
                 <div class="hero-stat">
-                    <span class="hero-stat-number">10+</span>
+                    <span class="hero-stat-number">20+</span>
                     <span class="hero-stat-label">Anos de Inovação</span>
                 </div>
                 <div class="hero-stat">
@@ -53,7 +53,7 @@
                 </div>
             </div>
         </div>
-</section>
+    </section>
 
     <script>
         const header = document.querySelector('header');
@@ -84,7 +84,7 @@
     <section class="stats">
         <div class="stats-container">
             <div class="stat-item">
-                <div class="stat-number">10+</div>
+                <div class="stat-number">20+</div>
                 <div class="stat-label">Anos de Inovação</div>
             </div>
             <div class="stat-item">
@@ -104,36 +104,36 @@
             <p>Revestimentos inovadores que transformam piscinas e ambientes em verdadeiras obras de arte funcionais</p>
         </div>
         <div class="products-grid">
-            <div class="product-card">
+            <a class="product-card" href="./products/products.html#arga-sand-pool">
                 <div class="product-image">
-                    <img src="data:image/svg+xml,%3Csvg width='400' height='300' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='300' fill='%232d7a7a'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='18' fill='white' text-anchor='middle' dy='.3em'%3EArgaSand Pool%3C/text%3E%3C/svg%3E" alt="ArgaSand Pool">
+                     <img src="./assets/images/produtos/arga-sand_1.jpg" alt="Arga Sand">
                 </div>
                 <div class="product-content">
                     <h3>ArgaSand Pool</h3>
                     <p>Revestimento monolítico revolucionário para piscinas. Durabilidade excepcional, acabamento impecável e possibilidades infinitas de design.</p>
-                    <a href="#" class="product-link">Saiba mais →</a>
+                    <span class="product-link">Saiba mais →</span>
                 </div>
-            </div>
-            <div class="product-card">
+            </a>
+            <a class="product-card" href="./products/products.html#arga-micro-cement">
                 <div class="product-image">
                     <img src="./assets/images/produtos/arga-cement_1.jpg" alt="Arga Micro Cement">
                 </div>
                 <div class="product-content">
                     <h3>Arga Micro Cement</h3>
                     <p>Sofisticação moderna para ambientes residenciais. Textura elegante, alta performance e acabamento de cimento queimado premium.</p>
-                    <a href="#" class="product-link">Saiba mais →</a>
+                    <span class="product-link">Saiba mais →</span>
                 </div>
-            </div>
-            <div class="product-card">
+            </a>
+            <a class="product-card" href="./products/products.html#spray-deck">
                 <div class="product-image">
-                    <img src="data:image/svg+xml,%3Csvg width='400' height='300' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='400' height='300' fill='%234db8b8'/%3E%3Ctext x='50%25' y='50%25' font-family='Arial' font-size='18' fill='white' text-anchor='middle' dy='.3em'%3ESpray Deck%3C/text%3E%3C/svg%3E" alt="Spray Deck">
+                   <img src="./assets/images/produtos/spray-deck_1.jpg" alt="Spray Deck">                
                 </div>
                 <div class="product-content">
                     <h3>Spray Deck</h3>
                     <p>Sistema de texturização projetada. Pisos contínuos, antiderrapantes e atérmicos com design personalizado e manutenção simplificada.</p>
-                    <a href="#" class="product-link">Saiba mais →</a>
+                    <span class="product-link">Saiba mais →</span>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
 
@@ -167,10 +167,7 @@
 
     <footer>
         <div class="footer-content">
-            <div class="footer-about">
-                <h3>FLUYR</h3>
-                <p>Transformamos ambientes através de soluções inovadoras em revestimentos. Qualidade, sofisticação e compromisso em cada projeto.</p>
-            </div>
+
             <div class="footer-links">
                 <h4>Produtos</h4>
                 <ul>
@@ -183,8 +180,8 @@
             <div class="footer-links">
                 <h4>Empresa</h4>
                 <ul>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Projetos</a></li>
+                    <li><a href="./about/about.html">Sobre</a></li>
+                    <li><a href="./projetos/projetos.html">Projetos</a></li>
                     <li><a href="#">Processo</a></li>
                     <li><a href="#">Contato</a></li>
                 </ul>
