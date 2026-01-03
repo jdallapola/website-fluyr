@@ -31,6 +31,9 @@ body {
   color: var(--color-gray-dark);
   line-height: 1.6;
   overflow-x: hidden;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
@@ -550,22 +553,24 @@ nav a:hover {
 
 .scroll-down-wrap {
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 0.4rem;
   text-align: center;
   z-index: 4;
+  width: 100%;
 }
 
 .scroll-down-label {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.9);
-  letter-spacing: 0.06em;
-  text-transform: lowercase;
+  font-size: .8rem;
+  color: rgba(255, 255, 255, 0.81);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
 }
 
 .scroll-down {
